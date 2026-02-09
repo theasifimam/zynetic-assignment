@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { randomUUID } from 'crypto';
 
 const API_URL = 'http://localhost:3000/v1/ingest';
 

@@ -25,9 +25,9 @@ app.use('/v1', createApiRouter(ingestService, analyticsService));
 app.get('/health', async (req, res) => {
     try {
         await db.raw('SELECT 1');
-        res.status(200).send('OK');
+        res.status(200).send({ status: 'healthy', message: "Server is running" });
     } catch (e) {
-        res.status(503).send('Unhealthy');
+        res.status(503).send({ status: 'unhealthy', message: "Server is not running" });
     }
 });
 
