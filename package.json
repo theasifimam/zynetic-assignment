@@ -1,0 +1,31 @@
+{
+  "name": "zynetic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/src/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "migrate": "knex migrate:latest --knexfile src/db/knexfile.ts",
+    "migrate:make": "knex migrate:make"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "knex": "^3.1.0",
+    "pg": "^8.18.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.2",
+    "axios": "^1.13.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
